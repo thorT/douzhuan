@@ -24,6 +24,7 @@
             },
             bgColor: {
                 type: String,
+                default:'themeWhite'
             },
             titleColor: {
                 type: String,
@@ -42,7 +43,7 @@
             return {
                 bgColorArr: {
                     theme: ' linear-gradient(to right, #FD7049 , #FDA86A,#FDA990)',
-                    themeWhite: '',
+                    themeWhite: 'white',
                 },
 
             }
