@@ -2,7 +2,7 @@
     <div>
         <div id="mheader" :style="{ background: bgColorArr[bgColor],color:titleColor}">
             <div class="topBlank"></div>
-            <div class="content">
+            <div class="content" :style="shadow?styleobj:''">
                 <i class="icon iconfont" @click="back">&#xe617;</i>
                 {{title}}
                 <router-link :to="subpath" class="subtitle" :style="{color:titleColor}" v-if="subtitle">
@@ -29,6 +29,9 @@
             titleColor: {
                 type: String,
             },
+            shadow:{
+                type:Boolean
+            },
             subtitle: {
                 type: String,
             },
@@ -41,6 +44,9 @@
         },
         data(){
             return {
+                styleobj:{
+                    'box-shadow': '0 2px 4px 0 rgba(103,103,103,0.14)'
+                },
                 bgColorArr: {
                     theme: ' linear-gradient(to right, #FD7049 , #FDA86A,#FDA990)',
                     themeWhite: 'white',
@@ -74,10 +80,12 @@
             i
                 position: absolute
                 left: 0
-                font-size: $font-size-large-x
+                font-size: 25px
                 display: inline-block
                 width: 50px
                 font-weight: 900
+        .noshadow .content
+            box-shadow: 0 2px 4px 0 rgba(103,103,103,0.14);
 
     .empty
         height: $nav;

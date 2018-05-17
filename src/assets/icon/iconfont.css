@@ -1,7 +1,7 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1526462377487#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.ttf?t=1526462377487') format('truetype') /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  src: url('iconfont.eot?t=1526545174298#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.ttf?t=1526545174298') format('truetype')/* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
 }
 
 .iconfont {
@@ -45,6 +45,8 @@
 .icon-shouzhimingxi:before { content: "\e676"; }
 
 .icon-xinshoushanglu:before { content: "\e680"; }
+
+.icon-icon-up-copy:before { content: "\e618"; }
 
 .icon-sketch-white:before { content: "\e607"; }
 

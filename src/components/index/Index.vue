@@ -1,4 +1,5 @@
 <template>
+    <transition name="slide">
     <div id="index">
         <header>
             <div class="empty colorbg"></div>
@@ -120,13 +121,14 @@
                             <span class="child"><i class="icon iconfont">&#xe608;</i></span>
                         </router-link>
                     </div>
-                    <div class="efooter"></div>
+                    <div class="clearbottom"></div>
                 </div>
             </Scroll>
         </main>
 
         <Service></Service>
     </div>
+    </transition>
 </template>
 
 <script type="text/ecmascript-6">
@@ -147,10 +149,17 @@
 </script>
 <style scoped lang="stylus" rel="stylesheet/stylus">
     @import "~common/stylus/variable"
+    .slide-enter-active, .slide-leave-active
+        transition: all 0.3s
+
+    .slide-enter, .slide-leave-to
+        transform: translate3d(-100%, 0, 0)
     #index
         width 100%
-        height 64px
-        position relative
+        position absolute
+        top 0
+        height 100%
+        bottom 0
         .blank
             height 64px
         .empty
@@ -187,7 +196,7 @@
         position fixed
         overflow scroll
         width 100%
-        bottom 10px
+        bottom 0
         top 64px
         #indexScroll
             overflow scroll
