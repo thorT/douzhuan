@@ -65,7 +65,7 @@
                         mclass: 'one',
                         icon: '&#xe676;',
                         name: '提现记录',
-                        topath: '/cash/record'
+                        topath: '/cash/apply/record'
                     }],
                     [
                         {

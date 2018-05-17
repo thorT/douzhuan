@@ -22,8 +22,9 @@
             <p v-for="tip in tips" class="gray" v-html="tip">
             </p>
             <Mbutton :title="'提交'" class="mtop"></Mbutton>
-            <Mbutton :title="'查看提现记录'" :bgColor="'white'" :titleColor="'#333333'" @buttonAction="goto('/cash/record')" ></Mbutton>
+            <Mbutton :title="'查看提现记录'" :bgColor="'white'" :titleColor="'#333333'" @buttonAction="goto('/cash/apply/record')" ></Mbutton>
             <Service></Service>
+            <router-view></router-view>
         </div>
 
     </transition>
@@ -72,7 +73,7 @@
         transition: all 0.3s
 
     .slide-enter, .slide-leave-to
-        transform: translate3d(-100%, 0, 0)
+        transform: translate3d(100%, 0, 0)
 
     .apply
         position fixed

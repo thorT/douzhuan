@@ -130,7 +130,7 @@
         width 100%
         height 100%
         background $color-background
-        z-index 700
+        z-index 800
         overflow scroll
         section  + section
             margin-top 10px

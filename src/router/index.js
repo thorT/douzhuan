@@ -22,10 +22,6 @@ export default new Router({
             component: Cash,
             children: [
                 {
-                    path: 'record',
-                    component: Record
-                },
-                {
                     path: 'taskincome',
                     component: TaskIncome
                 },
@@ -39,9 +35,15 @@ export default new Router({
                 },
                 {
                     path: 'apply',
-                    component: Apply
+                    component: Apply,
+                    children: [
+                        {
+                            path: 'record',
+                            component: Record
+                        }
+                    ]
                 }
-                ]
+            ]
         },
 
     ]
