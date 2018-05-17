@@ -89,7 +89,8 @@
           li.bigli
             height $line-height-m
             line-height $line-height-m
-
+          li:last-child
+              margin-bottom 10px
           li+li
             border-top 1px solid $color-gap
           li
@@ -98,7 +99,6 @@
             height $button-height
             line-height $button-height
             font-size 0
-            margin-bottom 10px
             h3
               width 30%
               text-align left
@@ -110,6 +110,7 @@
               text-align right
               display inline-block
               font-size $font-size-medium
+              vertical-align middle
               i
                  color #4CAAE6
                  font-size 35px
