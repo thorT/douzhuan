@@ -1,6 +1,6 @@
 <template>
     <div class="mbutton">
-        <a href="javascript:void(0)" :style="{ background: bgColor,color:titleColor}" @click="aclick">{{title}}</a>
+        <a :style="{ background: bgColor,color:titleColor}" @click="aclick">{{title}}</a>
     </div>
 </template>
 
@@ -38,7 +38,8 @@
             text-align center
             line-height $button-height
             color $color-background-li
-            margin 50px auto
+            margin 12px auto
             border-radius 22px
             font-size $font-size-medium-x
+
 </style>

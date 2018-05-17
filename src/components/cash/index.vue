@@ -33,7 +33,7 @@
                             </li>
                         </ul>
                     </Mli>
-                    <Mbutton :title="'申请提现'"></Mbutton>
+                    <Mbutton :title="'申请提现'" @buttonAction="goto('/cash/apply')" class="mtop"></Mbutton>
                     <div class="clearbottom"></div>
                 </div>
             </Scroll>
@@ -72,19 +72,19 @@
                             mclass: 'two',
                             icon: '&#xe651;',
                             name: '任务收入',
-                            topath: '/13'
+                            topath: '/cash/taskincome'
                         },
                         {
                             mclass: 'three',
                             icon: '&#xe600;',
                             name: '好友提成',
-                            topath: '/14'
+                            topath: '/cash/friendplus'
                         },
                         {
                             mclass: 'two',
                             icon: '&#xe60c;',
                             name: '其他收入',
-                            topath: '/15'
+                            topath: '/cash/otherincome'
                         }
                     ]
 
