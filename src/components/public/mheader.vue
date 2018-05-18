@@ -83,7 +83,6 @@
                 font-size: 25px
                 display: inline-block
                 width: 50px
-                font-weight: 900
         .noshadow .content
             box-shadow: 0 2px 4px 0 rgba(103,103,103,0.14);
 

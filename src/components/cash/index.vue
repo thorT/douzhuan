@@ -26,21 +26,20 @@
                     <Mli>
                         <ul v-for="item in items">
 
-                            <li v-for="sonitem in item" @click="goto(sonitem.topath)">
+                            <li v-for="sonitem in item" @click="goto(sonitem.type,sonitem.topath)">
                                 <span class="linaicon" :class="sonitem.mclass"><i class="icon iconfont left" v-html="sonitem.icon"></i></span>
                                 <p>{{sonitem.name}}</p>
                                 <span class="right"><i class="icon iconfont">&#xe608;</i></span>
                             </li>
                         </ul>
                     </Mli>
-                    <Mbutton :title="'申请提现'" @buttonAction="goto('/cash/apply')" class="mtop"></Mbutton>
+                    <Mbutton :title="'申请提现'" @buttonAction="goto('0','/cash/apply')" class="mtop"></Mbutton>
                     <div class="clearbottom"></div>
                 </div>
             </Scroll>
 
         </div>
 
-        <Service></Service>
         <router-view></router-view>
 
     </div>
@@ -48,7 +47,6 @@
 </template>
 
 <script type="text/ecmascript-6">
-    import Service from "@/components/public/service";
     import Mheader from "@/components/public/mheader";
     import Mbutton from "@/components/public/mbutton";
     import Mli from "@/components/public/mli";
@@ -56,7 +54,7 @@
 
     export default {
         components: {
-            Service, Mheader, Mli, Mbutton, Scroll
+            Mheader, Mli, Mbutton, Scroll
         },
         data(){
             return {
@@ -65,26 +63,26 @@
                         mclass: 'one',
                         icon: '&#xe676;',
                         name: '提现记录',
-                        topath: '/cash/apply/record'
+                        topath: '/cash/apply/record',
                     }],
                     [
                         {
                             mclass: 'two',
                             icon: '&#xe651;',
                             name: '任务收入',
-                            topath: '/cash/taskincome'
+                            type:'task'
                         },
                         {
                             mclass: 'three',
                             icon: '&#xe600;',
                             name: '好友提成',
-                            topath: '/cash/friendplus'
+                            type:'friend'
                         },
                         {
                             mclass: 'two',
                             icon: '&#xe60c;',
                             name: '其他收入',
-                            topath: '/cash/otherincome'
+                            type:'other'
                         }
                     ]
 
@@ -92,9 +90,10 @@
             }
         },
         methods: {
-            goto(path){
-                this.$router.push(path)
-            }
+            goto(type=0,path){
+                 path= path ? path : '/cash/myincome'
+                 this.$router.push({path:path,query:{type:type}})
+            },
         }
     }
 

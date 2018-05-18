@@ -3,12 +3,14 @@ import Router from 'vue-router'
 import Index from '@/components/index/index'
 import Cash from '@/components/cash/index'
 import Record from '@/components/cash/record'
-import TaskIncome from '@/components/cash/taskincome'
-import FriendPlus from '@/components/cash/friendplus'
-import OtherIncome from '@/components/cash/otherincome'
+import MyIncome from '@/components/cash/myincome'
 import Apply from '@/components/cash/apply'
+import Limit from '@/components/task/limit'
+import High from '@/components/task/high'
+import Game from '@/components/task/game'
+import Comment from '@/components/task/comment'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
     routes: [
@@ -22,16 +24,8 @@ export default new Router({
             component: Cash,
             children: [
                 {
-                    path: 'taskincome',
-                    component: TaskIncome
-                },
-                {
-                    path: 'friendplus',
-                    component: FriendPlus
-                },
-                {
-                    path: 'otherincome',
-                    component: OtherIncome
+                    path: 'myincome',
+                    component: MyIncome
                 },
                 {
                     path: 'apply',
@@ -44,6 +38,22 @@ export default new Router({
                     ]
                 }
             ]
+        },
+        {
+            path: '/limit',
+            component: Limit
+        },
+        {
+            path: '/high',
+            component: High
+        },
+        {
+            path: '/game',
+            component: Game
+        },
+        {
+            path: '/comment',
+            component: Comment
         },
 
     ]

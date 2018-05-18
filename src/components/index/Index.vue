@@ -42,14 +42,14 @@
                     <div class="option">
                         <ul>
                             <li>
-                                <router-link to="/limittask" tag="div">
+                                <router-link to="/limit" tag="div">
                                     <h2 class="six linaicon"><i class="icon iconfont">&#xe610;</i></h2>
                                     <h3>限时任务</h3>
                                     <h4>收益三分钟内到账</h4>
                                 </router-link>
                             </li>
                             <li>
-                                <router-link to="/limittask" tag="div">
+                                <router-link to="/high" tag="div">
                                     <h2 class="two linaicon"><i class="icon iconfont"
                                                                 style="font-size: 24px">&#xe607;</i>
                                     </h2>
@@ -58,7 +58,7 @@
                                 </router-link>
                             </li>
                             <li>
-                                <router-link to="/limittask" tag="div">
+                                <router-link to="/game" tag="div">
                                     <h2 class="three linaicon"><i class="icon iconfont">&#xe604;</i></h2>
                                     <h3>游戏任务</h3>
                                     <h4>收益三分钟内到账</h4>
@@ -67,7 +67,7 @@
                         </ul>
                         <ul>
                             <li>
-                                <router-link to="/limittask" tag="div">
+                                <router-link to="/comment" tag="div">
                                     <h2 class="two linaicon"><i class="icon iconfont">&#xe605;</i></h2>
                                     <h3>评论任务</h3>
                                     <h4>收益三分钟内到账</h4>
@@ -126,18 +126,16 @@
             </Scroll>
         </main>
 
-        <Service></Service>
     </div>
     </transition>
 </template>
 
 <script type="text/ecmascript-6">
-    import Service from "@/components/public/service";
     import Scroll from '@/components/public/scroll'
 
     export default {
         components: {
-            Service, Scroll
+             Scroll
         },
         methods: {
             loadImage() {

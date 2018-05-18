@@ -25,21 +25,19 @@
                     </li>
                 </ul>
             </section>
-            <Service></Service>
         </div>
 
     </transition>
 </template>
 
 <script type="text/ecmascript-6">
-    import Service from "@/components/public/service";
     import Mheader from "@/components/public/mheader";
     import Mbutton from "@/components/public/mbutton";
     import Scroll from '@/components/public/scroll'
 
     export default {
         components: {
-            Service, Mheader, Mbutton, Scroll
+             Mheader, Mbutton, Scroll
         },
         data(){
             return {
@@ -168,7 +166,6 @@
                     span
                         display inline-block
                         width 10%
-                        height 100%
                         float left
                         span.footerline
                               div
@@ -197,7 +194,7 @@
                         span:first-child
                             height: 15px
                         span:last-child
-                            height: 49px
+                            height: 50px
                     div.price
                         display inline-block
                         width 70%

@@ -23,7 +23,6 @@
             </p>
             <Mbutton :title="'提交'" class="mtop"></Mbutton>
             <Mbutton :title="'查看提现记录'" :bgColor="'white'" :titleColor="'#333333'" @buttonAction="goto('/cash/apply/record')" ></Mbutton>
-            <Service></Service>
             <router-view></router-view>
         </div>
 
@@ -31,23 +30,22 @@
 </template>
 
 <script type="text/ecmascript-6">
-    import Service from "@/components/public/service";
     import Mheader from "@/components/public/mheader";
     import Mbutton from "@/components/public/mbutton";
     import Scroll from '@/components/public/scroll'
 
     export default {
         components: {
-            Service, Mheader, Mbutton, Scroll
+            Mheader, Mbutton, Scroll
         },
         data(){
             return {
                 tips:[
                     " · <i class='blue'>支付宝</i>每笔提现均会扣除<i class='blue'>1元手续费</i>",
                     " · 到账时间最快当天，通常为第二天到账",
-                    " · <i class='blue'>周末、法定节假日不处理提现</i>（周5-6顺延周1，周7顺延周2）",
+                    " · <i class='blue'>周末、法定节假日不处理提现</i>(周5-6顺延周1,周7顺延周2)",
                     " · 所以提现均人工审核，审核完成后由系统自动打款",
-                    " · 如支付宝账号错误，多设备多账号等作弊行为会导致提现失败"
+                    " · 如支付宝账号错误,多设备多账号等作弊行为会导致提现失败"
                 ],
                 options:[
                     {name:'提现金额',content:'请输入金额',input:true},
